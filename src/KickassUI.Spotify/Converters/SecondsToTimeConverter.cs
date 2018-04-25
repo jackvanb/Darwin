@@ -2,7 +2,7 @@
 using System.Globalization;
 using Xamarin.Forms;
 
-namespace KickassUI.Spotify.Converters
+namespace Darwin.Converters
 {
     public class SecondsToTimeConverter : IValueConverter
     {

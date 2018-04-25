@@ -1,7 +1,7 @@
 ﻿using System;
 using FreshMvvm;
 
-namespace KickassUI.Spotify.PageModels
+namespace Darwin.PageModels
 {
     public class EmptyPageModel : FreshBasePageModel
     {

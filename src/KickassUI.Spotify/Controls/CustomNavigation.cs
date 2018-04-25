@@ -6,7 +6,7 @@ using BottomBar.XamarinForms;
 using FreshMvvm;
 using Xamarin.Forms;
 
-namespace KickassUI.Spotify.Controls
+namespace Darwin.Controls
 {
     public class CustomNavigation : BottomBarPage, IFreshNavigationService
     {

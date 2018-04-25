@@ -1,11 +1,11 @@
 ﻿using System;
-using KickassUI.Spotify.iOS.Renderers;
+using Darwin.iOS.Renderers;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(TabbedPage), typeof(ColoredTabBarRenderer))]
-namespace KickassUI.Spotify.iOS.Renderers
+namespace Darwin.iOS.Renderers
 {
     public class ColoredTabBarRenderer : TabbedRenderer
     {

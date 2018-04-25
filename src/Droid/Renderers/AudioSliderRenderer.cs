@@ -1,12 +1,12 @@
 ﻿using System;
 using Android.Graphics.Drawables;
-using KickassUI.Spotify.Controls;
-using KickassUI.Spotify.Droid.Renderers;
+using Darwin.Controls;
+using Darwin.Droid.Renderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ExportRenderer(typeof(AudioSlider), typeof(AudioSliderRenderer))]
-namespace KickassUI.Spotify.Droid.Renderers
+namespace Darwin.Droid.Renderers
 {
     public class AudioSliderRenderer : SliderRenderer
     {

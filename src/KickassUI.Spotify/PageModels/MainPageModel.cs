@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using FreshMvvm;
-using KickassUI.Spotify.Models;
+using Darwin.Models;
 using Xamarin.Forms;
 
-namespace KickassUI.Spotify.PageModels
+namespace Darwin.PageModels
 {
     public class MainPageModel : FreshBasePageModel
     {
@@ -14,14 +14,17 @@ namespace KickassUI.Spotify.PageModels
 
         public List<Album> Albums { get; set; }
         public List<Playlist> Playlists { get; set; }
-        public List<Song> Songs { get; set; }
+        public List<AudioFile> Songs { get; set; }
+        public List<AudioFile> Podcasts { get; set;  }
+
+
 
         ICommand openPlayerCommand;
         public ICommand OpenPlayerCommand
         {
             get
             {
-                return openPlayerCommand ?? (openPlayerCommand = new Command<Song>(async (item) => await OpenPlayer(item), (arg) => !openingPage));
+                return openPlayerCommand ?? (openPlayerCommand = new Command<AudioFile>(async (item) => await OpenPlayer(item), (arg) => !openingPage));
             }
         }
 
@@ -44,7 +47,7 @@ namespace KickassUI.Spotify.PageModels
                     new Playlist(){ Name="Feeling Good, Feeling Great", NrOfFollowers=250211, ImageUrl="https://i.scdn.co/image/9c003edf2bcc3386c400d087b3bb4adb75ee1f5a"},
             };
 
-            Songs = new List<Song>()
+            Songs = new List<AudioFile>()
             {
                     new Song(){ Artist="Muse", Title="Dig Down", LengthInSeconds=228, AlbumImageUrl="https://i.scdn.co/image/08d56eac0c7d48bb8bf7752b2202c3314db79394"},
                     new Song(){ Artist="Gorillaz", Title="Clint Eastwood", LengthInSeconds=341, AlbumImageUrl="https://i.scdn.co/image/6c6086f6922b9a44920310b34ef98161bd7adf78"},
@@ -53,11 +56,36 @@ namespace KickassUI.Spotify.PageModels
                     new Song(){ Artist="System of a Down", Title="Hypnotize", LengthInSeconds=189, AlbumImageUrl="https://i.scdn.co/image/66eb75e0f3a8a91822ba7154e4b41066e63e51f2"},
                     new Song(){ Artist="Paramore", Title="Hard Times", LengthInSeconds=182, AlbumImageUrl="https://i.scdn.co/image/d8296568ae1b856050976111fa892d8db693efd5"}
             };
+
+            Podcasts = new List<AudioFile>()
+            {
+                new Podcast() { Artist="Barstool Sports", Title="Pardon My Take", LengthInSeconds=69, AlbumImageUrl="https://www.podcastone.com/imagesproc/L2ltYWdlcy9sb2dvcy8zMDB4MzAwL3BvZF9QTVRfMl8zMDAuanBn_H_SW300_MH300.jpg" },
+                new Podcast() { Artist="Kehlani", Title="Good As Hell", LengthInSeconds=69, AlbumImageUrl="https://spotifyblogcom.files.wordpress.com/2018/02/podcast-cover-key-art_good_as_hell-1.jpg?w=730&h=730&zoom=2"},
+                new Podcast() { Artist="Andrew Zarian & Paul Thurott", Title="What The Tech?", LengthInSeconds=69, AlbumImageUrl="https://pbs.twimg.com/profile_images/555049025930407936/rUdJjyZn.jpeg"}
+            };
+
+            foreach (Podcast p in Podcasts)
+            {
+                p.Episodes = new List<Episode>()
+                {
+                    new Episode() { Artist="Barstool Sports", Title = "Episode 1", LengthInSeconds=228, AlbumImageUrl="https://www.podcastone.com/imagesproc/L2ltYWdlcy9sb2dvcy8zMDB4MzAwL3BvZF9QTVRfMl8zMDAuanBn_H_SW300_MH300.jpg"},
+                    new Episode() { Artist="Barstool Sports", Title = "Episode 2", AlbumImageUrl="https://www.podcastone.com/imagesproc/L2ltYWdlcy9sb2dvcy8zMDB4MzAwL3BvZF9QTVRfMl8zMDAuanBn_H_SW300_MH300.jpg"},
+                    new Episode() { Artist="Barstool Sports", Title = "Episode 3", AlbumImageUrl="https://www.podcastone.com/imagesproc/L2ltYWdlcy9sb2dvcy8zMDB4MzAwL3BvZF9QTVRfMl8zMDAuanBn_H_SW300_MH300.jpg"},
+                    new Episode() { Artist="Barstool Sports", Title = "Episode 4", AlbumImageUrl="https://www.podcastone.com/imagesproc/L2ltYWdlcy9sb2dvcy8zMDB4MzAwL3BvZF9QTVRfMl8zMDAuanBn_H_SW300_MH300.jpg"}
+
+                };
+            }
+        
         }
 
-        async Task OpenPlayer(Song item)
-        {
-            await CoreMethods.PushPageModel<PlayerPageModel>(item, true, true);
+        async Task OpenPlayer(AudioFile item)
+        { 
+             
+            if (item is Podcast)
+                await CoreMethods.PushPageModel<PodcastPageModel>(item);
+            else 
+                await CoreMethods.PushPageModel<PlayerPageModel>(item, true, true);
+                
         }
     }
 }

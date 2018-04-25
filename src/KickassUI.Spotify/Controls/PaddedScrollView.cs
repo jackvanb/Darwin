@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace KickassUI.Spotify.Controls
+namespace Darwin.Controls
 {
     public class PaddedScrollView : ScrollView
     {

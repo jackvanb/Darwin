@@ -1,14 +1,14 @@
 ﻿using System.Linq;
 using CoreGraphics;
-using KickassUI.Spotify.iOS.Helpers;
-using KickassUI.Spotify.iOS.Renderers;
-using KickassUI.Spotify.Controls;
+using Darwin.iOS.Helpers;
+using Darwin.iOS.Renderers;
+using Darwin.Controls;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(ModalPage), typeof(ModalPageRenderer))]
-namespace KickassUI.Spotify.iOS.Renderers
+namespace Darwin.iOS.Renderers
 {
     public class ModalPageRenderer : PageRenderer
     {

@@ -1,11 +1,11 @@
 ﻿using System;
-using KickassUI.Spotify.Controls;
-using KickassUI.Spotify.iOS.Renderers;
+using Darwin.Controls;
+using Darwin.iOS.Renderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(HorizontalScrollView), typeof(HorizontalScrollViewRenderer))]
-namespace KickassUI.Spotify.iOS.Renderers
+namespace Darwin.iOS.Renderers
 {
     public class HorizontalScrollViewRenderer : ScrollViewRenderer
     {

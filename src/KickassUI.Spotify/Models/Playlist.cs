@@ -1,5 +1,5 @@
 ﻿using System;
-namespace KickassUI.Spotify.Models
+namespace Darwin.Models
 {
     public class Playlist
     {

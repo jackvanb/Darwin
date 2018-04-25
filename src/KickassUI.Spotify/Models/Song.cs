@@ -1,11 +1,8 @@
 ﻿using System;
-namespace KickassUI.Spotify.Models
+namespace Darwin.Models
 {
-    public class Song
+    public class Song : AudioFile
     {
-        public string Artist { get; set; }
-        public string Title { get; set; }
-        public string AlbumImageUrl { get; set; }
-        public int LengthInSeconds { get; set; }
+        
     }
 }

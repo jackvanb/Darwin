@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<controls:ModalPage Title="AFSPELEN VAN AFSPEELLIJST" Subtitle="Kickass Tunes" BackgroundColor="#181818"
+<controls:ModalPage Title="{Binding Song.Title}" Subtitle="{Binding Song.Artist}" BackgroundColor="#181818"
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:controls="clr-namespace:KickassUI.Spotify.Controls;assembly=KickassUI.Spotify"
-    xmlns:effects="clr-namespace:KickassUI.Spotify.Effects;assembly=KickassUI.Spotify"
-    x:Class="KickassUI.Spotify.Pages.PlayerPage">
+    xmlns:controls="clr-namespace:Darwin.Controls;assembly=Darwin"
+    xmlns:effects="clr-namespace:Darwin.Effects;assembly=Darwin"
+    x:Class="Darwin.Pages.PlayerPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Icon="icon_chevron_down" Command="{Binding ClosePlayerCommand}" />
         <ToolbarItem Icon="icon_playlist" />

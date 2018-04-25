@@ -7,13 +7,13 @@ using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.Renderscripts;
 using Android.Widget;
-using KickassUI.Spotify.Droid.Renderers;
-using KickassUI.Spotify.Controls;
+using Darwin.Droid.Renderers;
+using Darwin.Controls;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ExportRenderer(typeof(BlurredImage), typeof(BlurredImageRenderer))]
-namespace KickassUI.Spotify.Droid.Renderers
+namespace Darwin.Droid.Renderers
 {
     public class BlurredImageRenderer : ViewRenderer<BlurredImage, ImageView>
     {

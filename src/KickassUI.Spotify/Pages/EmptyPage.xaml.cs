@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace KickassUI.Spotify.Pages
+namespace Darwin.Pages
 {
     public partial class EmptyPage : ContentPage
     {

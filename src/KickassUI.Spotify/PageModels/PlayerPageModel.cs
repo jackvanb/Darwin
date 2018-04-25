@@ -2,21 +2,33 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 using FreshMvvm;
-using KickassUI.Spotify.Models;
+using Plugin.MediaManager;
+using Plugin.MediaManager.Abstractions;
+using Plugin.MediaManager.Abstractions.Enums;
+using Plugin.MediaManager.Abstractions.EventArguments;
+using Plugin.MediaManager.Abstractions.Implementations;
+using Darwin.Models;
 using PropertyChanged;
 using Xamarin.Forms;
 
-namespace KickassUI.Spotify.PageModels
+namespace Darwin.PageModels
 {
     [AddINotifyPropertyChangedInterface]
     public class PlayerPageModel : FreshBasePageModel
     {
-        public Song Song { get; set; }
+        
+
+        public AudioFile Song { get; set; }
         public bool IsPlaying { get; set; }
 
         [AlsoNotifyFor(nameof(TicksLeft))]
         public int Ticks { get; set; }
         public int TicksLeft => Song.LengthInSeconds - Ticks;
+
+        public PlayerPageModel()
+        {
+            CrossMediaManager.Current.VolumeManager.CurrentVolume = 50;
+        }
 
         ICommand closePlayerCommand;
         public ICommand ClosePlayerCommand
@@ -38,10 +50,21 @@ namespace KickassUI.Spotify.PageModels
 
         private void StartStopPlaying()
         {
+
+            var mediaFile = new MediaFile
+            {
+                Type = MediaFileType.Audio,
+                Availability = ResourceAvailability.Remote,
+                Url = "https://audioboom.com/posts/5766044-follow-up-305.mp3"
+
+            };
+
             if (!IsPlaying)
             {
                 IsPlaying = true;
 
+                CrossMediaManager.Current.Play(mediaFile);
+  
                 Device.StartTimer(TimeSpan.FromSeconds(1), () =>
                 {
                     Ticks += 1;
@@ -58,11 +81,13 @@ namespace KickassUI.Spotify.PageModels
             {
                 // If it is currently playing, set it to false.
                 IsPlaying = false;
+                CrossMediaManager.Current.Pause();
             }
         }
 
         private async Task ClosePlayer()
         {
+            await CrossMediaManager.Current.Stop();
             await CoreMethods.PopPageModel(true, true);
         }
 
@@ -70,7 +95,7 @@ namespace KickassUI.Spotify.PageModels
         {
             base.Init(initData);
 
-            Song = initData as Song;
+            Song = initData as AudioFile;
         }
     }
 }

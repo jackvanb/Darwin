@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace KickassUI.Spotify.Controls
+namespace Darwin.Controls
 {
     public class HorizontalScrollView : ScrollView
     {

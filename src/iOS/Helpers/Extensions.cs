@@ -2,7 +2,7 @@
 using System.Drawing;
 using UIKit;
 
-namespace KickassUI.Spotify.iOS.Helpers
+namespace Darwin.iOS.Helpers
 {
     public static class Extensions
     {

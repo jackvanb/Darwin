@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace KickassUI.Spotify.Pages
+namespace Darwin.Pages
 {
     public partial class MainPage : ContentPage
     {
@@ -13,7 +13,7 @@ namespace KickassUI.Spotify.Pages
 
             // Hide the navbar on Android
             if (Device.RuntimePlatform == Device.Android)
-                NavigationPage.SetHasNavigationBar(this, false);
+               NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

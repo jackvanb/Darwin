@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Linq;
 using CoreGraphics;
-using KickassUI.Spotify.iOS.Helpers;
-using KickassUI.Spotify.iOS.Renderers;
+using Darwin.iOS.Helpers;
+using Darwin.iOS.Renderers;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(NavigationPage), typeof(TranslucentNavigationPageRenderer))]
-namespace KickassUI.Spotify.iOS.Renderers
+namespace Darwin.iOS.Renderers
 {
     public class TranslucentNavigationPageRenderer : NavigationRenderer
     {

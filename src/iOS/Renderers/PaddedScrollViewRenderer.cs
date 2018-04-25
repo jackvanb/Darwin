@@ -1,12 +1,12 @@
 ﻿using System;
-using KickassUI.Spotify.Controls;
-using KickassUI.Spotify.iOS.Renderers;
+using Darwin.Controls;
+using Darwin.iOS.Renderers;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(PaddedScrollView), typeof(PaddedScrollViewRenderer))]
-namespace KickassUI.Spotify.iOS.Renderers
+namespace Darwin.iOS.Renderers
 {
     public class PaddedScrollViewRenderer : ScrollViewRenderer
     {

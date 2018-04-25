@@ -5441,8 +5441,26 @@ namespace KickassUI.Spotify.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
+			// aapt resource value: 0x7f020124
+			public const int avd_hide_password_1 = 2130837796;
+			
+			// aapt resource value: 0x7f020125
+			public const int avd_hide_password_2 = 2130837797;
+			
+			// aapt resource value: 0x7f020126
+			public const int avd_hide_password_3 = 2130837798;
+			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
+			
+			// aapt resource value: 0x7f020127
+			public const int avd_show_password_1 = 2130837799;
+			
+			// aapt resource value: 0x7f020128
+			public const int avd_show_password_2 = 2130837800;
+			
+			// aapt resource value: 0x7f020129
+			public const int avd_show_password_3 = 2130837801;
 			
 			// aapt resource value: 0x7f020055
 			public const int bb_bottom_bar_top_shadow = 2130837589;

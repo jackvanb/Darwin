@@ -1,13 +1,13 @@
 ﻿using System;
 using CoreGraphics;
-using KickassUI.Spotify.Controls;
-using KickassUI.Spotify.iOS.Renderers;
+using Darwin.Controls;
+using Darwin.iOS.Renderers;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(AudioSlider), typeof(AudioSliderRenderer))]
-namespace KickassUI.Spotify.iOS.Renderers
+namespace Darwin.iOS.Renderers
 {
     public class AudioSliderRenderer : SliderRenderer
     {

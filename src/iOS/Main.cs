@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace KickassUI.Spotify.iOS
+namespace Darwin.iOS
 {
     public class Application
     {

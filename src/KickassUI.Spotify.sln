@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KickassUI.Spotify", "KickassUI.Spotify\KickassUI.Spotify.csproj", "{D23A93F2-A7A3-4C60-BFD7-66DE9F681C10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KickassUI.Spotify.iOS", "iOS\KickassUI.Spotify.iOS.csproj", "{40AFBD94-3A81-4F96-8017-33E7CFE9CF26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS", "iOS\iOS.csproj", "{40AFBD94-3A81-4F96-8017-33E7CFE9CF26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KickassUI.Spotify.Droid", "Droid\KickassUI.Spotify.Droid.csproj", "{BDB0634E-73EC-4823-A2AA-9A8A1B599A22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driod", "Droid\Driod.csproj", "{BDB0634E-73EC-4823-A2AA-9A8A1B599A22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

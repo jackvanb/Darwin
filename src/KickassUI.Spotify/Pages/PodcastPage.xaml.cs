@@ -23,7 +23,7 @@ namespace Darwin.Pages
             //BindingContext = new Darwin.PageModels.PodcastPageModel();
             //pageModel = new PageModels.PodcastPageModel();
            // lstView.ItemsSource = new Darwin.PageModels.PodcastPageModel().Podcast.Episodes;
-       }
+         }
 
         //async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         //{
@@ -36,10 +36,10 @@ namespace Darwin.Pages
 
         public async void OnPodcastSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var episode = e.SelectedItem as Models.AudioFile;
+           // var episode = e.SelectedItem as Models.AudioFile;
 
             PageModels.PodcastPageModel vm = this.BindingContext as PageModels.PodcastPageModel;
-            await vm.OpenPlayer(episode);
+			await vm.OpenPlayer(vm.Podcast);
         }
     }
 }

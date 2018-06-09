@@ -5,6 +5,6 @@ namespace Darwin.Models
 {
     public class Podcast : AudioFile
     {
-        public List<Episode> Episodes { get; set; }
+		public List<AudioFile> Episodes { get; set; } = null;
     }
 }

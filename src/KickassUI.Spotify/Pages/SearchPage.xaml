@@ -6,8 +6,9 @@
     xmlns:effects="clr-namespace:Darwin.Effects;assembly=Darwin"
     x:Class="Darwin.Pages.SearchPage">
     <ContentPage.Content>
+       <ScrollView>
         <StackLayout>
-            <ContentView BackgroundColor="#222327" HeightRequest="80">
+           <!-- <ContentView BackgroundColor="#222327" >
                 <ContentView.IsVisible>
                     <OnPlatform x:TypeArguments="x:Boolean">
                         <On Platform="Android" Value="true" />
@@ -16,24 +17,26 @@
                 </ContentView.IsVisible>
                 <Label Text="Search" Style="{StaticResource MediumLabel}"  TextColor="#FFF" FontSize="16" 
                 HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Fill" />
-            </ContentView>
+            </ContentView>-->
           <StackLayout>
           <SearchBar Margin="0,100,0,0" Placeholder="Search Name, Host, or Category" BackgroundColor="#181818" HorizontalOptions="Center"/>
            <Label Style="{StaticResource MediumLabel}" Margin="10" TextColor="White" Text="Popular Categories" />
          </StackLayout>
         <Grid VerticalOptions="FillAndExpand" x:Name="Grid" Padding="10" >
           <Grid.RowDefinitions>
-                <RowDefinition Height="175" />
-                <RowDefinition Height="175" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="175"/>
-                <ColumnDefinition Width="175"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
             </Grid.ColumnDefinitions>
 
             
         </Grid>
      </StackLayout>
+     </ScrollView>
     </ContentPage.Content>
 </ContentPage>

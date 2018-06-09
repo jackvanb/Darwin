@@ -1,7 +1,5 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Darwin.Pages
 {
@@ -16,9 +14,10 @@ namespace Darwin.Pages
             foreach (var s in squares)
             {
                 var widget = new Controls.TileView(s);
-                widget.Tapped += (object sender, Controls.TileTappedEventArgs e) => {
-                    var page = Activator.CreateInstance(e.Page) as Page;
-                    Navigation.PushAsync(page);
+				widget.Tapped += async (object sender, Controls.TileTappedEventArgs e) => {
+                    //var page = Activator.CreateInstance(e.Page) as Page;
+					PageModels.SearchPageModel vm = this.BindingContext as PageModels.SearchPageModel;
+					await vm.OpenPage();
                 };
                 Grid.Children.Add(widget, s.Column, s.Row);
              }

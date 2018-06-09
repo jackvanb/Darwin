@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<controls:ModalPage Title="{Binding Song.Title}" Subtitle="{Binding Song.Artist}" BackgroundColor="#181818"
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<controls:ModalPage Title="{Binding Song.Title}" Subtitle="{Binding Song.Author}" BackgroundColor="#181818"
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:controls="clr-namespace:Darwin.Controls;assembly=Darwin"
@@ -14,7 +14,7 @@
             <Grid>
                 <AbsoluteLayout>
                     <controls:BlurredImage AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" InputTransparent="false" x:Name="artwork" 
-                    HorizontalOptions="FillAndExpand" Aspect="Fill" VerticalOptions="FillAndExpand" Source="{Binding Song.AlbumImageUrl}" />
+                    HorizontalOptions="FillAndExpand" Aspect="Fill" VerticalOptions="FillAndExpand" Source="{Binding Song.Image}" />
                 </AbsoluteLayout>
                 <StackLayout HorizontalOptions="FillAndExpand"> 
                     <StackLayout.Padding>
@@ -41,7 +41,7 @@
                         </StackLayout>
                         <Image Source="icon_playlist" VerticalOptions="Center" HorizontalOptions="End" />
                     </StackLayout>
-                    <Image Source="{Binding Song.AlbumImageUrl}" VerticalOptions="Center">
+                    <Image Source="{Binding Song.Image}" VerticalOptions="Center">
                         <Image.HeightRequest>
                             <OnPlatform x:TypeArguments="x:Double">
                                 <On Platform="Android" Value="300" />
@@ -58,7 +58,7 @@
                         <Image Source="icon_plus" Grid.Column="0" HorizontalOptions="Center" />
                         <StackLayout Grid.Column="1" HorizontalOptions="Center">
                             <Label Text="{Binding Song.Title}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Style="{StaticResource BoldLabel}" FontSize="18" TextColor="White" />
-                            <Label Margin="0,-5,0,0" Text="{Binding Song.Artist}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontSize="14" TextColor="#adaeb2" />
+                            <Label Margin="0,-5,0,0" Text="{Binding Song.Author}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontSize="14" TextColor="#adaeb2" />
                         </StackLayout>
                         <Image Source="icon_ellipsis" Grid.Column="2" HorizontalOptions="Center" />
                     </Grid>

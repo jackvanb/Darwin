@@ -3248,6 +3248,10 @@ namespace KickassUI.Spotify.Droid
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_id = global::KickassUI.Spotify.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_inflatedId = global::KickassUI.Spotify.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_layout = global::KickassUI.Spotify.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::PCLCrypto.Resource.String.ApplicationName = global::KickassUI.Spotify.Droid.Resource.String.ApplicationName;
+			global::PCLCrypto.Resource.String.Hello = global::KickassUI.Spotify.Droid.Resource.String.Hello;
+			global::PCLStorage.Resource.String.ApplicationName = global::KickassUI.Spotify.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::KickassUI.Spotify.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::KickassUI.Spotify.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -6982,6 +6986,12 @@ namespace KickassUI.Spotify.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f09003f
+			public const int ApplicationName = 2131296319;
+			
+			// aapt resource value: 0x7f09003e
+			public const int Hello = 2131296318;
+			
 			// aapt resource value: 0x7f090015
 			public const int abc_action_bar_home_description = 2131296277;
 			
@@ -7075,8 +7085,8 @@ namespace KickassUI.Spotify.Droid
 			// aapt resource value: 0x7f090027
 			public const int abc_toolbar_collapse_description = 2131296295;
 			
-			// aapt resource value: 0x7f09003e
-			public const int app_name = 2131296318;
+			// aapt resource value: 0x7f090040
+			public const int app_name = 2131296320;
 			
 			// aapt resource value: 0x7f090036
 			public const int appbar_scrolling_view_behavior = 2131296310;
@@ -7087,8 +7097,8 @@ namespace KickassUI.Spotify.Droid
 			// aapt resource value: 0x7f090038
 			public const int character_counter_pattern = 2131296312;
 			
-			// aapt resource value: 0x7f09003f
-			public const int library_name = 2131296319;
+			// aapt resource value: 0x7f090041
+			public const int library_name = 2131296321;
 			
 			// aapt resource value: 0x7f090000
 			public const int mr_button_content_description = 2131296256;

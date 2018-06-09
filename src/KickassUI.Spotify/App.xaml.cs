@@ -20,10 +20,10 @@ namespace Darwin
                 var tabs = new FreshMvvm.FreshTabbedNavigationContainer() { BarTextColor = Color.White, BarBackgroundColor = Color.Black };
 
                 tabs.AddTab<MainPageModel>("Discover", "icon_home.png");
-                tabs.AddTab<EmptyPageModel>("Playlist", "icon_browse.png");
+                tabs.AddTab<PlaylistPageModel>("Playlist", "icon_browse.png");
                 tabs.AddTab<SearchPageModel>("Search", "icon_search.png");
-                tabs.AddTab<EmptyPageModel>("Notifications", "icon_radio.png");
-                tabs.AddTab<EmptyPageModel>("Profile", "icon_library.png");
+				tabs.AddTab<NotificationsPageModel>("Notifications", "icon_radio.png");
+                tabs.AddTab<ProfilePageModel>("Profile", "icon_library.png");
 
                 MainPage = tabs;
             }

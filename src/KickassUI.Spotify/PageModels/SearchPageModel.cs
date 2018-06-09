@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Threading.Tasks;
 using FreshMvvm;
+using System.Collections.Generic;
+
 namespace Darwin.PageModels
 {
     public class SearchPageModel : FreshBasePageModel
@@ -9,53 +10,53 @@ namespace Darwin.PageModels
         {
             return new List<Models.Tile>() {
                 new Models.Tile () {
-                    BackgroundImage = "concert.jpg",
+                    BackgroundImage = "film-tv.jpg",
                     //IconImage = "button_play@2x.png",
-                    Text = "Music",
+                    Text = "Film and TV",
                     Column = 0,
                     Row = 0,
                     NavigateType = typeof(Page1)
                 },
                 new Models.Tile () {
-                    BackgroundImage = "concert.jpg",
+                    BackgroundImage = "history.png",
                     //IconImage = "button_play@2x.png",
-                    Text = "Comedy",
+                    Text = "History",
                     Column = 1,
                     Row = 0,
                     NavigateType = typeof(Page2)
                 },
                 new Models.Tile () {
-                    BackgroundImage = "concert.jpg",
+                    BackgroundImage = "sports.jpg",
                    // IconImage = "button_play@2x.png",
-                    Text = "News",
+                    Text = "Sports",
                     Column = 0,
                     Row = 1,
                     NavigateType = typeof(Page3)
                 },
                 new Models.Tile () {
-                    BackgroundImage = "concert.jpg",
+					BackgroundImage = "health.png",
                     //IconImage = "button_play@2x.png",
-                    Text = "Bedtime Stories",
+                    Text = "Health",
                     Column = 1,
                     Row = 1,
                     NavigateType = typeof(Page4)
+                },
+                new Models.Tile () {
+					BackgroundImage = "technology.jpg",
+                  //  IconImage = "accessories.png",
+                    Text = "Technology",
+                    Column = 0,
+                    Row = 2,
+                    NavigateType = typeof(Page5)
+                },
+                new Models.Tile () {
+					BackgroundImage = "business.jpg",
+                   // IconImage = "housewares.png",
+                    Text = "Buisness",
+                    Column = 1,
+                    Row = 2,
+                    NavigateType = typeof(Page6)
                 }
-                //new Models.Tile () {
-                //    BackgroundImage = "accessoriesbg.png",
-                //    IconImage = "accessories.png",
-                //    Text = "Accessories",
-                //    Column = 1,
-                //    Row = 1,
-                //    NavigateType = typeof(Page5)
-                //},
-                //new Models.Tile () {
-                //    BackgroundImage = "housewaresbg.png",
-                //    IconImage = "housewares.png",
-                //    Text = "Housewares",
-                //    Column = 2,
-                //    Row = 1,
-                //    NavigateType = typeof(Page6)
-                //}
                 //new Models.Tile () {
                 //    BackgroundImage = "giftsbg.png",
                 //    IconImage = "gifts.png",
@@ -107,5 +108,11 @@ namespace Darwin.PageModels
 
 
         }
+
+		public async Task OpenPage()
+        {
+			await CoreMethods.PushPageModel<PlaylistPageModel>(true);
+        }
+
     }
 }

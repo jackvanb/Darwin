@@ -3,9 +3,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using FreshMvvm;
 using Plugin.MediaManager;
-using Plugin.MediaManager.Abstractions;
 using Plugin.MediaManager.Abstractions.Enums;
-using Plugin.MediaManager.Abstractions.EventArguments;
 using Plugin.MediaManager.Abstractions.Implementations;
 using Darwin.Models;
 using PropertyChanged;
@@ -18,7 +16,7 @@ namespace Darwin.PageModels
     {
         
 
-        public AudioFile Song { get; set; }
+		public Podcast Song { get; set; }
         public bool IsPlaying { get; set; }
 
         [AlsoNotifyFor(nameof(TicksLeft))]
@@ -95,7 +93,7 @@ namespace Darwin.PageModels
         {
             base.Init(initData);
 
-            Song = initData as AudioFile;
+			Song = initData as Podcast;
         }
     }
 }

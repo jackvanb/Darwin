@@ -9,7 +9,7 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-     
+     <ScrollView>
         
        <!--<StackLayout> 
             <ListView  x:Name="lstView" RowHeight="60" BackgroundColor="#181818" SeparatorVisibility="None">
@@ -27,8 +27,14 @@
             </ListView.ItemTemplate>
         </ListView>
        </StackLayout>-->
+     <StackLayout>
+        <StackLayout HorizontalOptions="StartAndExpand">
+         <Image Source="{Binding Podcast.Image}" />
+         <Label Text="{Binding Podcast.Title}" Style="{StaticResource BoldLabel}" TextColor="White" />
 
-     <ListView x:Name="lstView" ItemsSource="{Binding Podcast.Episodes}" ItemSelected="OnPodcastSelected" BackgroundColor="#181818" SeparatorVisibility="None" RowHeight="60" >
+       </StackLayout>
+
+     <ListView x:Name="lstView" ItemsSource="{Binding Episodes}" ItemSelected="OnPodcastSelected" BackgroundColor="#181818" SeparatorVisibility="None" RowHeight="60" >
         <ListView.ItemTemplate >
             <DataTemplate>
                 <ViewCell>
@@ -39,14 +45,15 @@
                         </Grid.RowDefinitions>
                         <Label Style="{StaticResource BoldLabel}" Text="{Binding Title}" TextColor="White" FontSize="18" FontAttributes="Bold" />
                          <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Start">
-                            <Image HorizontalOptions="Start" HeightRequest="25" WidthRequest="25" Source="{Binding AlbumImageURL}" >   
-                            </Image>
-                            <Label Text="{Binding Artist}" Style="{StaticResource BoldLabel}" FontSize="13" TextColor="#adaeb2" />
+                            <Label Text="{Binding Author}" Style="{StaticResource BoldLabel}" FontSize="13" TextColor="#adaeb2" />
                         </StackLayout>
                     </Grid>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+
+   </StackLayout>
+    </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+     BackgroundColor="#181818" Title="Profile"
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Darwin.Pages.ProfilePage">
+    <ContentPage.Content>
+
+        
+    <ScrollView>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="AUTO" />
+            </Grid.RowDefinitions>
+
+            <!--  header background  -->
+            <Image Aspect="AspectFill" Source="HeaderBackground.png" />
+            <Image Aspect="Fill" Margin="0,-1,0,-1" Source="CurvedMask.png" VerticalOptions="End" />
+
+            <!--  profile image  -->
+            <Image HeightRequest="100" HorizontalOptions="Center" Source="tung.png" TranslationY="50" VerticalOptions="End" WidthRequest="100" />
+
+            <!--  Profile Name  -->
+            <StackLayout Grid.Row="1" Padding="0,50,0,00" HorizontalOptions="Center">
+                <Label Style="{StaticResource ProfileNameLabel}" Text="Tung" TextColor="White" />
+                <Label Margin="0,-5" Style="{StaticResource ProfileTagLabel}" Text="Hipster Scuba Diver" />
+            </StackLayout>
+
+            <!--  Social Stats Section  -->
+            <Grid Grid.Row="2" Margin="0,30" ColumnSpacing="0" RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout>
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="5" />
+                    <Label Style="{StaticResource StatsCaptionLabel}" Text="Playlists" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1">
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="55" />
+                    <Label Style="{StaticResource StatsCaptionLabel}" Text="Following" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="2">
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="72" />
+                    <Label Style="{StaticResource StatsCaptionLabel}" Text="Followers" />
+                </StackLayout>
+            </Grid>
+
+            <!--  profile description  -->
+                <Label Margin="20,0" Grid.Row="3" Style="{StaticResource MainBodyLabel}" 
+                       Text="&quot;You miss 100% of the shots you don't take. - Wayne Gretzky - Michael Scott "/>
+
+            <!--  follow button  -->
+            <Button Grid.Row="4" Margin="100" Style="{StaticResource FollowButton}" Text="Follow" />
+
+        </Grid>
+    </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
